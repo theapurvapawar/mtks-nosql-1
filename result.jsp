@@ -9,17 +9,7 @@
 
 	<body>
 		
-		<div id='header'>		
-
-			<ul>
-				<li><a href='index.html'>Home</a></li>
-				<li><a href='upload.html'>Upload</a></li>
-				<li><a href='about.html'>About</a></li>
-			</ul>
-
-			<h2>MTKS</h2>
-
-		</div>
+		<%@ include file="includes/header-div.jsp" %>
 
 		<div id='container'>
 			
@@ -97,12 +87,7 @@
 
 		</div>
 
-		<div id='footer'>
-
-			<p> Apurva Pawar | Ruturaj Patil | Sachin Wagh | Sunil Shahapurkar
-			</p>
-
-		</div>
+		<%@ include file="includes/footer-div.jsp" %>
   
 	</body>
 </html>
