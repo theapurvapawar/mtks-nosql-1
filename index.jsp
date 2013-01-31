@@ -4,7 +4,7 @@
 
 		<title> Search Page | MTKS </title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script language="JavaScript" type="text/javascript">
+		<script type="text/javascript">
 
 function checkinput ( form )
 {
