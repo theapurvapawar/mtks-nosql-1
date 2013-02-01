@@ -1,0 +1,55 @@
+<!-- Change IPs before use -->
+<cluster>
+	<name>gateway</name>
+	<server>
+		<id>0</id>
+		<host>192.168.1.2</host>
+		<http-port>8081</http-port>
+		<socket-port>6666</socket-port>
+		<admin-port>6667</admin-port>
+		<partitions>0, 1</partitions>
+	</server>
+	<server>
+		<id>1</id>
+		<host>192.168.1.4</host>
+		<http-port>8081</http-port>
+		<socket-port>6666</socket-port>
+		<admin-port>6667</admin-port>
+		<partitions>2, 3</partitions>
+	</server>
+	<server>
+		<id>2</id>
+		<host>192.168.1.6</host>
+		<http-port>8081</http-port>
+		<socket-port>6666</socket-port>
+		<admin-port>6667</admin-port>
+		<partitions>2, 3</partitions>
+	</server>
+</cluster>
+<cluster>
+	<name>backend</name>
+	<server>
+		<id>0</id>
+		<host>192.168.1.1</host>
+		<http-port>8081</http-port>
+		<socket-port>6666</socket-port>
+		<admin-port>6667</admin-port>
+		<partitions>0, 1</partitions>
+	</server>
+	<server>
+		<id>1</id>
+		<host>192.168.1.3</host>
+		<http-port>8081</http-port>
+		<socket-port>6666</socket-port>
+		<admin-port>6667</admin-port>
+		<partitions>2, 3</partitions>
+	</server>
+	<server>
+		<id>2</id>
+		<host>192.168.1.5</host>
+		<http-port>8081</http-port>
+		<socket-port>6666</socket-port>
+		<admin-port>6667</admin-port>
+		<partitions>2, 3</partitions>
+	</server>
+</cluster>
