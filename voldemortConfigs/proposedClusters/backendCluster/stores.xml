@@ -1,7 +1,7 @@
 <stores>
   <!-- must have atleast two nodes running -->
   <store>
-    <name>invertedIndex</name>
+    <name>urlDatabase</name>
     <persistence>bdb</persistence>
     <routing>client</routing>
     <replication-factor>2</replication-factor>
