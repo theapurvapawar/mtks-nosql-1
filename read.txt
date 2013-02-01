@@ -1,3 +1,7 @@
 Added sample working voldemort cluster in folder Voldemort Configs
 mycluster is a single node cluster. Currently working.
 Place it in congfig folder in voldermort and built with 'ant' before deployment.
+
+Added 2ServerCluster config in Voldemort configs.
+currently working - 2 servers, 1 store accessible from any client.
+Store inaccessible when one server is down because required R/W is 2.
