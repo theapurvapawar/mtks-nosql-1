@@ -1,0 +1,16 @@
+16/2/2013
+Searched for Conflation algorithms
+Found basic Stemmers and Conflators
+
+17/2/2013
+Searched for Lucene as suggested by a friend.
+	Found Analyzers package in Apache Lucene which are basically tokenizers, stemmers and stop word filters
+
+18/2/2013
+Downloaded Lucene 4.1. Package size 26MB. Works but most of the classes are not needed. Basic Classes will do the job.
+
+19/2/2013
+Tried out various stemmers - WordConflation, Snowball etc. WordConflation does best whats required.
+
+20/2/2013
+Updated Conflation Class on github. Found that modifications may be required in stop word selection and maybe other suffix and prefix groups.
