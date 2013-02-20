@@ -1,0 +1,6 @@
+20/2/2013
+Found various articles on the internet comparing performance of BDB ( Berkley DB ) and MySQL
+BDB performs much better than MySQL in most of the comparative articles
+There needs to be a discussion when it comes to selecting back end storage for persistance.
+My vote goes for BDB for performance.
+The arguement mostly will be between performance and actual 'view' of the persistance mechanism using PHPMyAdmin and MySQL
