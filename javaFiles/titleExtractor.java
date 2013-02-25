@@ -1,13 +1,17 @@
 import net.htmlparser.jericho.*;
+
+import java.io.IOException;
 import java.net.*;
+
+
 
 /**
  * @author Apurva Pawar
  */
 
 /*
- *	Reads/Parses HTML document and extracts title
- *	Tested on sample Wikipedia Page
+ *	Reads/Parses HTML document and extracts title and certain text from document
+ *	Tested on sample Wikipedia Pages
  *	Requires jericho-html-3.3.jar
  *	For more information, refer - http://jericho.htmlparser.net/docs/index.html
  */
@@ -15,35 +19,55 @@ import java.net.*;
 
 
 public class titleExtractor {
-	public static void main(String[] args) throws Exception {
-		String sourceUrlString="/home/blackdragon/workspace/htmlParser/bin/data/Wiki";//change path to desired HTML page
-		if (args.length==0)
-		  System.err.println("Using default argument of \""+sourceUrlString+'"');
-		else
-			sourceUrlString=args[0];
+	
+	private String sourceUrlString;
+	private static Source source;
+	
+	void getURL(String url) throws MalformedURLException, IOException
+	{
+		sourceUrlString = url;
 		if (sourceUrlString.indexOf(':')==-1) sourceUrlString="file:"+sourceUrlString;
 		MicrosoftConditionalCommentTagTypes.register();
 		PHPTagTypes.register();
 		PHPTagTypes.PHP_SHORT.deregister(); // remove PHP short tags for this example otherwise they override processing instructions
 		MasonTagTypes.register();
-		Source source=new Source(new URL(sourceUrlString));
+		source = new Source(new URL(sourceUrlString));
+		source.fullSequentialParse();
+	}
 
-		// Call fullSequentialParse manually as most of the source will be parsed.
-		//source.fullSequentialParse();
 
+	private String getTitle() {
+		Element titleElement=source.getFirstElement(HTMLElementName.TITLE);
+		if (titleElement==null) return null;		
+		String title = CharacterReference.decodeCollapseWhiteSpace(titleElement.getContent());
+		title=title.replace(" - Wikipedia, the free encyclopedia",""); //removes ' - Wikipedia, the free encyclopedia' from title text
+		return title;
+	}
+	
+	private String getText()
+	{
+		String renderedText=source.getRenderer().toString();
+		if (renderedText==null) return null;			
+		return "..."+renderedText.substring(500, 750)+"..."; // gets char starting from 500 to 700
+	}
+	
+	
+
+	public static void main(String[] args) throws Exception {
+		
+
+		titleExtractor doc = new titleExtractor();
+		doc.getURL("/home/blackdragon/workspace/htmlParser/bin/data/Street_Fighter"); //put URL here
+		
 		System.out.println("Document title:");
-		String title=getTitle(source);
+		String title=doc.getTitle();
 		System.out.println(title==null ? "(none)" : title);
+		
+		
+		System.out.println("\nSimple rendering of the HTML document:\n");
+		String text=doc.getText();
+		System.out.println(text==null ? "(none)" : text);
 
 		
   }
-
-	private static String getTitle(Source source) {
-		Element titleElement=source.getFirstElement(HTMLElementName.TITLE);
-		if (titleElement==null) return null;
-		// TITLE element never contains other tags so just decode it collapsing whitespace:
-		return CharacterReference.decodeCollapseWhiteSpace(titleElement.getContent());
-	}
-
-	
 }
