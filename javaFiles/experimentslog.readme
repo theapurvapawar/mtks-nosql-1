@@ -1,0 +1,14 @@
+Log for over a period of time. Dates not confirmed yet.
+
+Searched for various parsers.
+
+Found SAX, DOM, Jericho and other xml/html parsers based on simple framework.
+
+Jericho was simplest to use. Others had complex documentations.
+
+Implemented Title Extraction for wikipedia pages, but has ' - Wikipedia, the free encyclopedia' as extra text which needs to be removed.
+
+Text extraction is left.
+
+25/2/2013
+Text extraction and title cutting is over.
