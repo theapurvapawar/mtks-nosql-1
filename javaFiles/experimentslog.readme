@@ -1,0 +1,21 @@
+25/2/2013
+Started work on Voldemort Java Client
+
+voldemort-1.1.7.jar required for importing all required classes
+
+Still gives class not found error.
+
+Downloaded indivial packages for classes which gave the class not found error.
+
+Still getting class not found error but for different classes.
+
+Realized that all required classes are available in jar format in the voldemort lib folder.
+Importing them works.
+
+To start voldemort server,
+tried to start an instance from the code, but environment variable for voldemort not getting accepted
+
+started server from command line in terminal, code for get/put works fine.
+
+28/2/2013
+Implemented Admin client to get all keys from single node of voldemort server.
