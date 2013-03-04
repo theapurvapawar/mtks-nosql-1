@@ -6,8 +6,16 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	</head>
+	<script type="text/javascript">
+function onLoad() {
+  var now = new Date().getTime();
+  var page_load_time = (now - performance.timing.navigationStart)/1000;
+  var p = document.getElementById("loadingtime");
+  p.innerHTML = "( " + page_load_time + " seconds )";  
+}
+</script>	
 
-	<body>
+	<body onLoad='onLoad();'>
 		
 		<%@ include file="includes/header-div.jsp" %>
 
@@ -17,7 +25,7 @@
 				
 				<h2>Result Search Term</h2>
 				<h3>2546000 Search Results</h3>
-				<h3>(0.78 seconds)</h3>
+				<h3 id='loadingtime'>(Loading time here...)</h3>
 
 			</div>
 
@@ -89,5 +97,6 @@
 
 		<%@ include file="includes/footer-div.jsp" %>
   
+
 	</body>
 </html>
