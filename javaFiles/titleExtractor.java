@@ -14,6 +14,7 @@ import java.net.*;
  *	Tested on sample Wikipedia Pages
  *	Requires jericho-html-3.3.jar
  *	For more information, refer - http://jericho.htmlparser.net/docs/index.html
+ *  **Updated to remove ' - Wikipedia_database' from title of documents from local mediawiki database
  */
  
 
@@ -36,15 +37,15 @@ public class titleExtractor {
 	}
 
 
-	private String getTitle() {
+	protected String getTitle() {
 		Element titleElement=source.getFirstElement(HTMLElementName.TITLE);
 		if (titleElement==null) return null;		
 		String title = CharacterReference.decodeCollapseWhiteSpace(titleElement.getContent());
-		title=title.replace(" - Wikipedia, the free encyclopedia",""); //removes ' - Wikipedia, the free encyclopedia' from title text
+		title=title.replace(" - Wikipedia_database",""); //removes ' - Wikipedia, the free encyclopedia' from title text
 		return title;
 	}
 	
-	private String getText()
+	protected String getText()
 	{
 		String renderedText=source.getRenderer().toString();
 		if (renderedText==null) return null;			
