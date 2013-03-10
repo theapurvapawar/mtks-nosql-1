@@ -15,3 +15,16 @@ Text extraction and title cutting is over.
 
 28/2/2013
 Recursive file search within a folder with url/title/text extraction has been implemented.
+
+6/3/2013
+Installed MediaWiki on WAMP (easyphp) in Windows.
+Imported wikipedia xml dump into MediaWiki via GUI. (memory issues, approx 20k files imported)
+Tried various exporting tools i.e. dumpHTML, mw2html.py etc. (none worked)
+
+8/3/2013
+Exported part of MediaWiki to html format using mw2html.py for test work (6000+ documents)
+mw2html.py required python 2.5 while I had v3.x (dont remember :P)
+also it required htmldata.py to be imported which is not in the default packages
+
+10/3/2013
+Imported temporary database of 6000+ html documents in voldemort backend database with SearchAndExtract Class
