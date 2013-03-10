@@ -19,3 +19,6 @@ started server from command line in terminal, code for get/put works fine.
 
 28/2/2013
 Implemented Admin client to get all keys from single node of voldemort server.
+
+10/3/2013
+Implemented server migration code
