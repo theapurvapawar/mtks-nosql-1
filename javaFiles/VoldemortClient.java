@@ -43,7 +43,7 @@ public class VoldemortClient {
 
     	VoldemortClient KVpair = new VoldemortClient("tcp://localhost:6666","test");    	
 
-        String key = "this_is_key",value="this_is_value";
+        String key = "this_is_key2",value="this_is_value";
         
         KVpair.putValueFor(key, value);        
         
