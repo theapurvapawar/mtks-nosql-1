@@ -3,6 +3,20 @@
 ###Project by -
 ###Apurva Pawar | Ruturaj Patil | Sachin Wagh | Sunil Shahapurkar
 
+NOTE - The project here is our individual progress up to March 18, 2013. Later, due to technical reasons, we could not keep track of our project on Github. To follow our progress up to March 18th, Click here - https://github.com/theapurvapawar/mtks-nosql-1/network
+
+Project Outline -
+
+![ScreenShot](http://farm6.staticflickr.com/5524/10605342273_65759cd257_o.png)
+
+Search Page Screenshot -
+
+![ScreenShot](http://farm8.staticflickr.com/7419/10605110126_6643436bda_o.png)
+
+Result Page Screenshot -
+
+![ScreenShot](http://farm4.staticflickr.com/3706/10605342233_9844ae407b_o.png)
+
 >The project will use HTML/CSS/JavaScript and optionally AJAX,JQuery
 >and other technologies to meet front-end requirements.
 >
